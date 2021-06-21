@@ -1,6 +1,5 @@
 <template>
   <div>
-      
   </div>
 </template>
 
@@ -12,5 +11,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// variables import
+@import '../style/variables.scss';
+div {
+    height: 500px;
+}
 
 </style>

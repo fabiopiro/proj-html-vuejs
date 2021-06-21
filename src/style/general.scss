@@ -18,3 +18,12 @@ body {
     // font - variable
     font-family: $main-font;
 }
+
+.button-one {
+    font-size: 13.5px;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: $color-three;
+    background-color: $color-one;
+}

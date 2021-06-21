@@ -5,12 +5,20 @@
                 <img src="../assets/img/logo.png" alt="">
             </div>
             <ul class="list d-flex align-items-center">
-                <li class="active"><a href="">ciao</a></li>
+                <li
+                v-for="(links, index) in navLinks"
+                :key="index"
+                @click="setActive(index)"
+                :class="(isActive == index) ? 'active' : ''"
+                >
+                <a :href="links.link">{{links.name}}</a>
+                </li>
+                <!-- <li class="active"><a href="">ciao</a></li>
                 <li><a href="">bello</a></li>
                 <li><a href="">ciao</a></li>
                 <li><a href="">bello</a></li>
                 <li><a href="">ciao</a></li>
-                <li><a href="">bello</a></li>
+                <li><a href="">bello</a></li> -->
                 
             </ul>
         </div>
@@ -23,8 +31,39 @@
 
 <script>
 export default {
-    name: 'Nav'
-
+    name: 'Nav',
+    data: function () {
+      return {
+        navLinks: [
+          {
+            name: 'home',
+            link: '#'
+          },
+          {
+            name: 'about',
+            link: '#'
+          },
+          {
+            name: 'services',
+            link: '#'
+          },
+          {
+            name: 'journal',
+            link: '#'
+          },
+          {
+            name: 'contacts',
+            link: '#'
+          },
+        ],
+        isActive: '0',
+      }
+    },
+    methods: {
+        setActive(i) {
+            this.isActive = i;
+        }
+    }
 }
 </script>
 

@@ -25,4 +25,8 @@ div {
     height: 500px;
 }
 
+.cont {
+    width: 60%;
+}
+
 </style>

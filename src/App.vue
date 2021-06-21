@@ -20,9 +20,9 @@ export default {
     Header,
     Main,
     Footer,
-
   }
 }
+
 </script>
 
 <style lang="scss">

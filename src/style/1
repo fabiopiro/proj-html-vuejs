@@ -3,3 +3,12 @@ font awesome phone
 
 font awesome chat
 <i class="fas fa-comment"></i>
+
+<li
+v-for="(links, index) in navLinks"
+:key="index"
+@click="setActive(index)"
+:class="(isActive == index) ? 'active' : ''"
+>
+<a :href="links.link">{{links.name}}</a>
+</li>

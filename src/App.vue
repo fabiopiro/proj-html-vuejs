@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :navLinks='navLinks' />
     <Main />
-    <Footer />
+    <Footer :navLinks='navLinks' />
   </div>
 </template>
 
@@ -20,7 +20,33 @@ export default {
     Header,
     Main,
     Footer,
-  }
+  },
+  data: function () {
+    return {
+      navLinks: [
+          {
+            name: 'home',
+            link: '#'
+          },
+          {
+            name: 'about',
+            link: '#'
+          },
+          {
+            name: 'services',
+            link: '#'
+          },
+          {
+            name: 'journal',
+            link: '#'
+          },
+          {
+            name: 'contacts',
+            link: '#'
+          },
+      ],
+    }
+  },
 }
 
 </script>

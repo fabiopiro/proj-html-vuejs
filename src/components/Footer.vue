@@ -1,7 +1,9 @@
 <template>
-  <div>
-      <Nav />
-  </div>
+  <footer>
+      <div class="wrapper"
+        ><Nav :navLinks='navLinks' />
+      </div>
+  </footer>
 </template>
 
 <script>
@@ -14,6 +16,12 @@ export default {
     components: {
         Nav
     },
+    props: {
+        navLinks: {
+            type: Array,
+            required: true,
+        },
+    },
 
 }
 </script>
@@ -21,8 +29,9 @@ export default {
 <style lang="scss" scoped>
 // variables import
 @import '../style/variables.scss';
-div {
+footer {
     height: 500px;
+    background-color: $color-two;
 }
 
 .cont {

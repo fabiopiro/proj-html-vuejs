@@ -12,3 +12,41 @@ v-for="(links, index) in navLinks"
 >
 <a :href="links.link">{{links.name}}</a>
 </li>
+
+<script>
+export default {
+    name: 'Nav',
+    data: function () {
+      return {
+        navLinks: [
+          {
+            name: 'home',
+            link: '#'
+          },
+          {
+            name: 'about',
+            link: '#'
+          },
+          {
+            name: 'services',
+            link: '#'
+          },
+          {
+            name: 'journal',
+            link: '#'
+          },
+          {
+            name: 'contacts',
+            link: '#'
+          },
+        ],
+        isActive: '0',
+      }
+    },
+    methods: {
+        setActive(i) {
+            this.isActive = i;
+        }
+    }
+}
+</script>

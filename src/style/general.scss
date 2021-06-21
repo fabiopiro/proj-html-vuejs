@@ -18,12 +18,25 @@ body {
     // font - variable
     font-family: $main-font;
 }
+.wrapper-80 {
+    width: 80%;
+    margin: auto;
+}
+.wrapper-75 {
+    width: 75%;
+    margin: auto;
+}
 
-.button-one {
+.button-one,
+.button-two {
     font-size: 13.5px;
     padding: 12px 30px;
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: bold;
     color: $color-three;
     background-color: $color-one;
+}
+.button-two {
+    color: $color-one;
+    background-color: $color-four;
 }

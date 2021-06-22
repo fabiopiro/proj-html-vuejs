@@ -1,7 +1,8 @@
 <template>
   <footer>
       <div class="wrapper-75">
-          <Nav :navLinks='navLinks' />
+          <Nav 
+          :navLinks='navLinks' />
         <div class="footer-text">
             <p class="title">Independent professional who works remotely to help with your busines</p>
             <div class="button-one">What is VA ecactly?</div>
@@ -42,7 +43,14 @@ export default {
 // variables import
 @import '../style/variables.scss';
 // [data-v-65af85a3]
-
+::v-deep .button-one {
+    color: $color-one;
+    background-color: $color-three;
+    &:hover {
+        color: $color-three;
+        background-color: $color-one;
+    }
+}
 
 footer {
     color: $color-one;

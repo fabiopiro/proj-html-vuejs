@@ -22,12 +22,19 @@
           </div>
       </div>
       <div class="fixed-container">
-          <div class="fixed-text">
+          <div 
+          v-if="!isHidden"
+          class="fixed-text">
+              <i 
+              @click="isHidden = true"
+              class="fas fa-times"></i>
               <span>This is a free HubSpot live chat. You can create your own chat flows and engage your customers with Avada & HubSpot!</span>
               <img class="fixed-icon" src="../assets/img/logo.png" alt="">
           </div>
           <div class="fixed-icon-message d-flex justify-content-end">
-              <i class="fas fa-comment"></i>
+              <i 
+              @click="isHidden = false"
+              class="fas fa-comment"></i>
           </div>
       </div>
   </header>
@@ -48,8 +55,14 @@ export default {
             type: Array,
             required: true,
         },
+    },
+    data: function () {
+        return {
+            isHidden: false,
+        }
     }
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -106,6 +119,14 @@ header {
         background-color: $color-one;
         line-height: 1.2;
 
+        i {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            color: lightgrey;
+        }
+
         .fixed-icon {
             width: 40px;
             height: 40px;
@@ -126,6 +147,7 @@ header {
             color: $color-one;
             background-color: $color-four;
             border-radius: 50%;
+            cursor: pointer;
         }
     }
 

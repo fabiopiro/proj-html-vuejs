@@ -4,9 +4,9 @@
       <div class="wrapper-80">
           <div class="jumbotron d-flex">
               <div id="jumbotron-text">
-                  <h1>
-                    Indipendent professional who work remotely to help with your business
-                  </h1>
+                  <h2>
+                    Indipendent professional who works remotely to help with your business
+                  </h2>
                   <h6>
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel fuga quam, iusto enim neque deserunt.
                   </h6>
@@ -15,7 +15,7 @@
                   </span>
               </div>
               <div id="jumbotron-image">
-                  <img src="../assets/img/info-1.jpg" alt="">
+                  <img  class="big-image" src="../assets/img/info-1.jpg" alt="">
               </div>
           </div>
       </div>
@@ -61,14 +61,10 @@ header {
     }
     #jumbotron-text {
         text-align: center;
-        padding: 5% 0;
-        padding-right: 5%;
+        margin: auto;
+        // padding: 5% 0;
+        // padding-right: 5%;
         color: $color-one;
-        h1 {
-            font-weight: bold;
-            font-size: 50px;
-            margin-bottom: 25px;
-        }
         h6 {
             margin-bottom: 50px;
         }
@@ -77,7 +73,6 @@ header {
         padding-left: 5%;
         padding-bottom: 5%;
         img {
-            width: 100%;
             border-radius: 5px;
             overflow: hidden;
         }

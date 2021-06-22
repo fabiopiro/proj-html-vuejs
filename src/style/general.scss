@@ -26,11 +26,16 @@ body {
     width: 75%;
     margin: auto;
 }
+.wrapper-50 {
+    width: 50%;
+    margin: auto;
+}
 
 .button-one,
 .button-two {
+    display: inline-block;
     font-size: 13.5px;
-    padding: 12px 30px;
+    padding: 12px 40px;
     border-radius: 3px;
     font-weight: bold;
     color: $color-three;
@@ -40,3 +45,63 @@ body {
     color: $color-one;
     background-color: $color-four;
 }
+
+h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+h3 {
+    font-size: 38px;
+    font-weight: bold;
+}
+h4 {
+    font-size: 28px;
+    font-weight: bold;
+}
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+h6 {
+    color: $color-four;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 15px;
+}
+
+.icon {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.big-image {
+    width: 100%;
+}
+
+.card-container {
+    .card-item {
+      color: $color-one;
+      background-color: $color-three;
+      border-radius: 5px;
+      padding: 50px;
+      margin-bottom: 15px;
+
+      .card-number {
+        margin-right: 50px;
+        span {
+          font-size: 30px;
+          font-weight: bold;
+        }
+      }
+      .card-text {
+        margin-top: 10px;
+        a {
+          color: $color-four;
+        }
+      }
+    }
+  }

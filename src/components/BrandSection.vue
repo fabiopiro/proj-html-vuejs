@@ -1,7 +1,7 @@
 <template>
   <section>
       <div class="wrapper-75">
-        <h5>Trusted by this amazing brands</h5>
+        <h6>Trusted by this amazing brands</h6>
         <div class="brand-list">
             <div class="container">
                 <div class="row">
@@ -28,7 +28,7 @@
             <div id="brand-main-text">
                 <img class="icon" src="../assets/img/icon-2.png" alt="">
                 <h3>Professional who works to help with your business</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi modi obcaecati eos doloremque officia deleniti.</p>
+                <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi modi obcaecati eos doloremque officia deleniti.</h5>
                 <div class="button-two">What is VA exactly?</div>
             </div>
             <div id="brand-main-image">
@@ -44,7 +44,7 @@
                     <span>1.</span>
                   </div>
                   <div class="card-text">
-                    <h3>Learn to delegate</h3>
+                    <h5>Learn to delegate</h5>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore eveniet animi sint quaerat libero. Modi illum id veniam est.</p>
                     <a href="">Learn More</a>
                   </div>
@@ -56,7 +56,7 @@
                     <span>1.</span>
                   </div>
                   <div class="card-text">
-                    <h3>Reduce labor cost</h3>
+                    <h5>Reduce labor cost</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, qui. Excepturi eum rem itaque accusantium ab. Commodi nesciunt maiores hic?</p>
                     <a href="">Learn More</a>
                   </div>

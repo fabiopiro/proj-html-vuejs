@@ -55,8 +55,9 @@ export default {
             list-style: none;
             margin: 0;
             padding: 0;
+            margin-left: 55px;
             li {
-                margin-left: 10px;
+                margin-left: 30px;
                 &.active {
                     border-bottom: 2px solid $color-one;
                 }

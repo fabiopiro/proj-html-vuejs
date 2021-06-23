@@ -122,6 +122,9 @@ p {
         a {
           color: $color-four;
           font-weight: bold;
+          &:hover {
+              color: $color-one;
+          }
         }
       }
     }

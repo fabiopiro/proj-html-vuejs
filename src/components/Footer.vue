@@ -55,6 +55,7 @@ export default {
 // variables import
 @import '../style/variables.scss';
 // [data-v-65af85a3]
+// VDEEP
 ::v-deep .button-one {
     color: $color-one;
     background-color: $color-three;
@@ -93,6 +94,9 @@ footer {
             a {
                 text-decoration: none;
                 color: $color-four;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

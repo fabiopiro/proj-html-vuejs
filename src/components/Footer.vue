@@ -1,10 +1,13 @@
 <template>
   <footer>
       <div class="wrapper-75">
+          <!-- NAV COMPONENT -->
           <!-- prop
           navLinks -->
           <Nav 
           :navLinks='navLinks' />
+          <!-- NAV COMPONENT -->
+
         <div class="footer-text">
             <p class="title">Independent professional who works remotely to help with your busines</p>
             <div class="button-one">What is VA ecactly?</div>
@@ -18,9 +21,11 @@
             </p>
         </div>
       </div>
+      <!-- button on top -->
       <div class="on-top-button">
           <a href="#"><i class="fas fa-chevron-up"></i></a>
       </div>
+      <!-- button in top -->
   </footer>
 </template>
 

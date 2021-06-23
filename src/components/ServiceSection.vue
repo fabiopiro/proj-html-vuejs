@@ -61,9 +61,9 @@ section {
         .services-item {
             width: 25%;
             padding: 5% 5%;
-            border-top: 2px solid lightgrey;
+            border-top: 3px solid #f0f1f5;
             &:not(:nth-child(4)) {
-                border-right: 2px solid lightgrey;
+                border-right: 3px solid #f0f1f5;
             }
         }
     }
@@ -82,6 +82,8 @@ section {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+                padding: 0 5%;
         }
     }
 }

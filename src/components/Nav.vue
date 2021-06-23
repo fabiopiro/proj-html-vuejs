@@ -1,9 +1,13 @@
 <template>
     <nav class="nav d-flex d-flex justify-content-between align-items-center">
+        <!-- nav left -->
         <div class="nav-left d-flex align-items-center">
+            <!-- nav logo -->
             <div class="logo">
                 <img src="../assets/img/logo.png" alt="">
             </div>
+            <!-- /nav logo -->
+            <!-- nav menu -->
             <ul class="list d-flex">
                 <li
                 v-for="(links, index) in navLinks"
@@ -15,11 +19,15 @@
                 href="">{{links.name}}</a>
                 </li>
             </ul>
+            <!-- /nav menu -->
         </div>
+        <!-- /nav left -->
+        <!-- nav right -->
         <div class="nav-right d-flex align-items-center">
             <span class="phone-number">1.800.123.4567</span>
             <span class="button-one">Get a free consultation</span>
         </div>
+        <!-- /nav right -->
     </nav>
 </template>
 
@@ -54,6 +62,7 @@ export default {
     height: 150px;
     background-color: $color-two;
 
+    // nav left
     .nav-left {
         
         .logo {
@@ -64,7 +73,7 @@ export default {
             width: 100%; 
             }
         }
-
+        // menu
         .list {
             list-style: none;
             margin: 0;
@@ -92,9 +101,12 @@ export default {
                 }
             }
         }
+        // / menu
 
     }
+    // /nav left
 
+    // nav right
     .nav-right {
         .phone-number {
             font-weight: bold;
@@ -108,6 +120,7 @@ export default {
             
         }
     }
+    // /nav right
 }
 
 </style>

@@ -1,6 +1,7 @@
 <template>
   <section>
       <div class="wrapper-75">
+        <!-- title -->
         <div class="title">
           <div class="wrapper-75">
             <h5>Lorem ipsum dolor sit amet.</h5>
@@ -8,6 +9,8 @@
             <div class="button-two">What is VA exactly?</div>
           </div>
         </div>
+        <!-- /title -->
+        <!-- cards -->
         <div class="card-container skill-card-container">
             <div class="container">
             <div class="row">
@@ -25,7 +28,7 @@
               <div class="col-lg-4">
                 <div class="card-item d-flex">
                   <div class="card-number">
-                    <span>1.</span>
+                    <span>2.</span>
                   </div>
                   <div class="card-text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, atque.</p>
@@ -36,7 +39,7 @@
               <div class="col-lg-4">
                 <div class="card-item d-flex">
                   <div class="card-number">
-                    <span>1.</span>
+                    <span>3.</span>
                   </div>
                   <div class="card-text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, veniam.</p>
@@ -47,6 +50,7 @@
             </div>
           </div>
         </div>
+        <!-- /cards -->
       </div>
   </section>
 </template>

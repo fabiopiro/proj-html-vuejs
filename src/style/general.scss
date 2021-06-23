@@ -18,6 +18,7 @@ body {
     // font - variable
     font-family: $main-font;
 }
+// wrappers
 .wrapper-95 {
     width: 95%;
     margin: auto;
@@ -34,7 +35,7 @@ body {
     width: 50%;
     margin: auto;
 }
-
+// button
 .button-one,
 .button-two {
     display: inline-block;
@@ -56,7 +57,7 @@ body {
     color: $color-one;
     background-color: $color-four;
 }
-
+// fonts
 h2 {
     font-size: 48px;
     font-weight: bold;
@@ -73,8 +74,9 @@ h4 {
     margin-bottom: 20px;
 }
 h5 {
-    font-size: 16px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 50px;
+    line-height: 1.6;
 }
 h6 {
     color: $color-four;
@@ -84,16 +86,16 @@ h6 {
 p {
     font-size: 16px;
 }
-
+// icons
 .icon {
     width: 150px;
     margin-bottom: 30px;
 }
-
+// images
 .big-image {
     width: 100%;
 }
-
+// cards
 .card-container {
     .card-item,
     .card-item-two {
@@ -101,10 +103,11 @@ p {
       background-color: $color-three;
       border-radius: 5px;
       padding: 50px;
+      margin: 0 15px;
       margin-bottom: 15px;
 
       .card-number {
-        margin-right: 50px;
+        margin-right: 30px;
         span {
           font-size: 30px;
           font-weight: bold;
@@ -112,6 +115,10 @@ p {
       }
       .card-text {
         margin-top: 10px;
+        h5 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
         a {
           color: $color-four;
           font-weight: bold;

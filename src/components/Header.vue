@@ -1,5 +1,6 @@
 <template>
     <header>
+        <!-- SIDE ICONS -->
         <div class="header-icons-container">
             <div class="header-icon">
                 <i class="far fa-folder"></i>
@@ -13,13 +14,17 @@
                 <span>On Sale</span>
             </div>
         </div>
+        <!-- /SIDE ICONS -->
         <div class="wrapper-95">
-            <!-- prop
-            navLinks -->
+            <!-- NAV COMPONENT-->
+            <!-- prop navLinks -->
             <Nav :navLinks='navLinks'/>
+            <!-- /NAV COMPONENT-->
         </div>
+        <!-- JUMBOTRON -->
         <div class="wrapper-80">
             <div class="jumbotron d-flex">
+                <!-- jumbotron text -->
                 <div id="jumbotron-text">
                   <h2>
                     Indipendent professional who works remotely to help with your business
@@ -31,27 +36,33 @@
                       What is VA exactly?
                   </span>
                 </div>
+                <!-- /jumbotron text -->
+                <!-- jumbotron image -->
                 <div id="jumbotron-image">
                   <img  class="big-image" src="../assets/img/info-1.jpg" alt="">
                 </div>
+                <!-- /jumbotron image -->
             </div>
         </div>
-      <div class="fixed-container">
-          <div 
-          v-if="!isHidden"
-          class="fixed-text">
-              <i 
+        <!-- /JUMBOTRON -->
+        <!-- FIXED CHAT -->
+        <div class="fixed-container">
+            <div
+            v-if="!isHidden"
+            class="fixed-text">
+              <i
               @click="isHidden = true"
               class="fas fa-times"></i>
               <span>This is a free HubSpot live chat. You can create your own chat flows and engage your customers with Avada & HubSpot!</span>
               <img class="fixed-icon" src="../assets/img/logo.png" alt="">
             </div>
              <div class="fixed-icon-message d-flex justify-content-end">
-              <i 
+              <i
               @click="isHidden = false"
               class="fas fa-comment"></i>
             </div>
         </div>
+        <!-- /FIXED CHAT -->
     </header>
 </template>
 
@@ -85,6 +96,7 @@ export default {
 <style lang="scss" scoped>
 // variables import
 @import '../style/variables.scss';
+
 header {
     position: relative;
     background: linear-gradient(
@@ -94,7 +106,8 @@ header {
         $color-one 90%,
         $color-one 100%
     );
-
+    
+    // SIDE ICONS
     .header-icons-container {
         position: absolute;
         top: 15%;
@@ -114,7 +127,6 @@ header {
             background-color: $color-one;
             border-radius: 5px;
             box-shadow: 1px 1px lightgrey;
-
             cursor: pointer;
 
             i {
@@ -131,10 +143,11 @@ header {
                     font-size: 22px;
                 }
             }
-
         }
     }
+    // /SIDE ICONS
 }
+// JUMBOTRON
 .jumbotron {
     #jumbotron-text,
     #jumbotron-image {
@@ -146,11 +159,8 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
         color: $color-one;
-        h6 {
-            margin-bottom: 50px;
-        }
+
     }
     #jumbotron-image {
         padding-left: 5%;
@@ -161,7 +171,9 @@ header {
         }
     }
 }
+// /JUMBOTRON
 
+// FIXED CHAT
 .fixed-container {
     position: fixed;
     bottom: 2%;
@@ -212,6 +224,6 @@ header {
             cursor: pointer;
         }
     }
-
 }
+// / FIXED CHAT
 </style>

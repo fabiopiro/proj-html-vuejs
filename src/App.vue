@@ -1,7 +1,13 @@
 <template>
   <div id="app">
+    <!-- prop
+    navLinks -->
     <Header :navLinks='navLinks' />
+
     <Main />
+    
+    <!-- prop
+    navLinks -->
     <Footer :navLinks='navLinks' />
   </div>
 </template>
@@ -23,6 +29,7 @@ export default {
   },
   data: function () {
     return {
+      // nav links
       navLinks: [
           {
             name: 'home',

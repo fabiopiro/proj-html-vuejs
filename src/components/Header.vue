@@ -1,11 +1,26 @@
 <template>
-  <header>
-      <div class="wrapper-90">
-        <Nav :navLinks='navLinks'/>
-      </div>
-      <div class="wrapper-80">
-          <div class="jumbotron d-flex">
-              <div id="jumbotron-text">
+    <header>
+        <div class="header-icons-container">
+            <div class="header-icon">
+                <i class="far fa-folder"></i>
+                <span>Demos</span>
+            </div>
+            <div class="header-icon">
+                <div class="dollar d-flex justify-content-center">
+                    <span class="dollar-symbol">$</span>
+                    <span class="dollar-number">39</span>
+                </div>
+                <span>On Sale</span>
+            </div>
+        </div>
+        <div class="wrapper-95">
+            <!-- prop
+            navLinks -->
+            <Nav :navLinks='navLinks'/>
+        </div>
+        <div class="wrapper-80">
+            <div class="jumbotron d-flex">
+                <div id="jumbotron-text">
                   <h2>
                     Indipendent professional who works remotely to help with your business
                   </h2>
@@ -15,12 +30,12 @@
                   <span class="button-one">
                       What is VA exactly?
                   </span>
-              </div>
-              <div id="jumbotron-image">
+                </div>
+                <div id="jumbotron-image">
                   <img  class="big-image" src="../assets/img/info-1.jpg" alt="">
-              </div>
-          </div>
-      </div>
+                </div>
+            </div>
+        </div>
       <div class="fixed-container">
           <div 
           v-if="!isHidden"
@@ -30,14 +45,14 @@
               class="fas fa-times"></i>
               <span>This is a free HubSpot live chat. You can create your own chat flows and engage your customers with Avada & HubSpot!</span>
               <img class="fixed-icon" src="../assets/img/logo.png" alt="">
-          </div>
-          <div class="fixed-icon-message d-flex justify-content-end">
+            </div>
+             <div class="fixed-icon-message d-flex justify-content-end">
               <i 
               @click="isHidden = false"
               class="fas fa-comment"></i>
-          </div>
-      </div>
-  </header>
+            </div>
+        </div>
+    </header>
 </template>
 
 <script>
@@ -50,6 +65,8 @@ export default {
     components: {
         Nav
     },
+    // prop
+    // navLinks from App
     props: {
         navLinks: {
             type: Array,
@@ -69,7 +86,7 @@ export default {
 // variables import
 @import '../style/variables.scss';
 header {
-    // background-color: $color-two;
+    position: relative;
     background: linear-gradient(
         to bottom,
         $color-two 0%,
@@ -77,6 +94,46 @@ header {
         $color-one 90%,
         $color-one 100%
     );
+
+    .header-icons-container {
+        position: absolute;
+        top: 15%;
+        right: 1%;
+        .header-icon {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            text-align: center;
+            font-size: 10px;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+            background-color: $color-one;
+            border-radius: 5px;
+            box-shadow: 1px 1px lightgrey;
+
+            cursor: pointer;
+
+            i {
+                font-size: 20px;
+            }
+
+            .dollar {
+                color: #90cd9b;
+                font-weight: bold;
+                .dollar-symbol {
+                    font-size: 15px;
+                }
+                .dollar-number {
+                    font-size: 22px;
+                }
+            }
+
+        }
+    }
 }
 .jumbotron {
     #jumbotron-text,
@@ -85,9 +142,11 @@ header {
     }
     #jumbotron-text {
         text-align: center;
-        margin: auto;
-        // padding: 5% 0;
-        // padding-right: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
         color: $color-one;
         h6 {
             margin-bottom: 50px;
@@ -101,7 +160,6 @@ header {
             overflow: hidden;
         }
     }
-
 }
 
 .fixed-container {
@@ -110,11 +168,15 @@ header {
     right: 2%;
     width: 200px;
 
+    z-index: 99;
+
     .fixed-text {
         padding: 0 15px;
         padding-top: 30px;
         padding-bottom: 10px;
-        box-shadow: 1px 1px lightgrey;
+        // box-shadow: 1px 1px lightgrey;
+        -webkit-box-shadow: 0 0 2px lightgrey;
+        box-shadow: 0 0 2px lightgrey;
         border-radius: 5px;
         background-color: $color-one;
         line-height: 1.2;

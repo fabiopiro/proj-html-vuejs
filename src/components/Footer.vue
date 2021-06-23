@@ -1,6 +1,8 @@
 <template>
   <footer>
       <div class="wrapper-75">
+          <!-- prop
+          navLinks -->
           <Nav 
           :navLinks='navLinks' />
         <div class="footer-text">
@@ -16,6 +18,9 @@
             </p>
         </div>
       </div>
+      <div class="on-top-button">
+          <a href="#"><i class="fas fa-chevron-up"></i></a>
+      </div>
   </footer>
 </template>
 
@@ -29,6 +34,8 @@ export default {
     components: {
         Nav
     },
+    // prop
+    // navLinks from App
     props: {
         navLinks: {
             type: Array,
@@ -51,8 +58,18 @@ export default {
         background-color: $color-one;
     }
 }
+.button-one {
+    color: $color-three;
+    background-color: $color-one;
+    &:hover {
+        color: $color-one;
+        background-color: $color-three;
+    }
+}
 
 footer {
+    position: relative;
+
     color: $color-one;
     background-color: $color-two;
     padding-top: 50px;
@@ -72,6 +89,26 @@ footer {
                 text-decoration: none;
                 color: $color-four;
             }
+        }
+    }
+    .on-top-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        bottom: 0;
+        left: 2%;
+
+        width: 40px;
+        height: 30px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        background-color: #2f3038;
+
+        a {
+            color: $color-one;
         }
     }
 }

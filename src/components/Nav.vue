@@ -9,7 +9,10 @@
                 v-for="(links, index) in navLinks"
                 :key="index"
                 >
-                <a href="">{{links.name}}</a>
+                <a 
+                @click.prevent="setActive(index)"
+                :class="(isActive == index) ? 'active' : ''"
+                href="">{{links.name}}</a>
                 </li>
             </ul>
         </div>
@@ -24,10 +27,21 @@
 export default {
     name: 'Nav',
     props: {
+        // prop navLinks from App/Header&Footer
         navLinks: {
             type: Array,
             required: true,
-        },
+        },   
+    },
+    data: function () {
+      return {
+        isActive: '0',
+      }
+    },
+    methods: {
+        setActive(i) {
+            this.isActive = i;
+        }
     }
 }
 </script>
@@ -58,22 +72,24 @@ export default {
             margin-left: 55px;
             li {
                 margin-left: 30px;
-                &.active {
-                    border-bottom: 2px solid $color-one;
-                }
                 a {
                     text-decoration: none;
                     color: $color-one;
                     font-weight: bold;
                     text-transform: capitalize;
+                    padding-bottom: 10px;
                     cursor: pointer;
+                    &:hover,
+                    &.active {
+                        border-bottom: 2px solid $color-one;
+                    }
                 }
-                // &:nth-child(3)::after {
-                //     font-family: "Font Awesome 5 Free";
-                //     font-weight: 900; content: "\f078";
-                //     padding-left: 10px;
-                //     color: $color-one;
-                // }
+                &:nth-child(3)::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900; content: "\f078";
+                    padding-left: 10px;
+                    color: $color-one;
+                }
             }
         }
 

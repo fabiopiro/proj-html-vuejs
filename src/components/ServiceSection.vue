@@ -1,7 +1,7 @@
 <template>
 <section>
     <div class="container w-75">
-        <section class="section-one">
+        <section class="service-section">
             <h6>Available services</h6>
             <div class="services d-flex">
                 <div class="services-item">
@@ -9,15 +9,15 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div class="services-item">
-                    <h4>Answering phone calls</h4>
+                    <h4>Basic data entry</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div class="services-item">
-                    <h4>Answering phone calls</h4>
+                    <h4>Organizing calendar</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div class="services-item">
-                    <h4>Answering phone calls</h4>
+                    <h4>Booking travels</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 <div id="virtual-assistant-info">
                     <img class="icon" src="../assets/img/icon-1.png" alt="">
                     <h3>Find the ultimate virtual assistant for your business</h3>
-                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora consequatur, fuga sit laudantium vitae iste?</h5>
+                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora consequatur.</h5>
                     <span class="button-two">What is VA exactly</span>
                 </div>
             </div>
@@ -49,14 +49,18 @@ export default {
 // variables import
 @import '../style/variables.scss';
 
-.section-one {
+section {
+    background-color: $color-one;
+}
+
+.service-section {
     margin: 15px 0;
     .services {
-        color: $color-three;
+        color: $color-two;
         margin-bottom: 15px;
         .services-item {
             width: 25%;
-            padding: 3% 5%;
+            padding: 5% 5%;
             border-top: 2px solid lightgrey;
             &:not(:nth-child(4)) {
                 border-right: 2px solid lightgrey;
@@ -71,9 +75,13 @@ export default {
         }
         
         #virtual-assistant-info {
-            color: $color-three;
+            color: $color-two;
             text-align: center;
-            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

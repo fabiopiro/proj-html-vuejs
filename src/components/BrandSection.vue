@@ -1,7 +1,7 @@
 <template>
   <section>
       <div class="wrapper-75">
-        <h6>Trusted by this amazing brands</h6>
+        <h6 class="text-center">Trusted by this amazing brands</h6>
         <div class="brand-list">
             <div class="container">
                 <div class="row">
@@ -39,7 +39,7 @@
             <div class="container">
             <div class="row">
               <div class="col-lg-6">
-                <div class="card-item d-flex">
+                <div class="card-item-two d-flex">
                   <div class="card-number">
                     <span>1.</span>
                   </div>
@@ -51,7 +51,7 @@
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="card-item d-flex">
+                <div class="card-item-two d-flex">
                   <div class="card-number">
                     <span>1.</span>
                   </div>
@@ -81,6 +81,8 @@ export default {
 
     section {
         margin: 120px 0;
+        background-color: $color-one;
+        color: $color-two;
     }
     .brand-list {
         img {
@@ -95,6 +97,10 @@ export default {
         }
         #brand-main-text {
             text-align: center;
-        }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
     }
 </style>
